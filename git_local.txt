@@ -1,0 +1,46 @@
+﻿1. Lệnh config thông tin:
+	git config --global user.name "tên , username"
+	git config --global user.email "email"
+2. Lệnh tạo repository
+	git init
+3. Lệnh thêm file vào stage(Chờ commit để đưa file lên nhánh)
+	git add tên file
+or
+	git add . (thêm toàn bộ file hiên có)
+	
+4. Lệnh commit (đưa file (những file đã add) lên nhánh)
+	git commit -m "ghi chú"
+5. Lệnh Branch
+     * Kiem tra branch : git branch 
+     * Tạo branch : git branch tên branch
+     * Tạo branch và chuyển luôn branch. Sẽ copy file của nhánh đang đứng
+	  + git checkout -b nhanh1
+6. Xem trạng thái của nhánh
+	git status (Những file đang có trong nhánh nếu có thay đổi sẽ hiển thị)
+7. Lệnh chuyển nhánh
+	git checkout tên nhánh
+8. Lệnh gom nhánh (merge)
+	git merge tên nhánh (Cần xử lý xung đột khi 1 file có 2 nhánh cung chỉnh sửa. conflict)
+9. Lệnh xóa branch (Đứng ngoài nhánh cần xóa)
+	git branch -d tên branch
+10. Thay đổi nội dung commit lần trước
+   - Sửa lại message commit bị nhầm
+     	git commit --amend
+   - Trường hợp add thiếu file hoặc sửa lại file đã commit
+	git add [file bi thiếu hoặc file cần sửa lại]
+	git commit --amend
+11. Undo lại commit
+	TH1: Muốn "undo" thay đổi file cố định đã lưu trước khi commit
+	  git checkout --tê file(hoặc đường dẫn)
+	TH2: Neu muốn undo hẳn 1 commit(đã lỡ commit)
+	  git reset --soft HEAD~1 
+		(HEAD~1): nghĩa là commit lần gần nhất. Lưu lại nhưng thay đổi chưa commit
+			và bỏ đi lầ commit gần nhất trước đó.
+	  git reset --hard HEAD~1
+		Bỏ đi cả những phần chưa commit và lần đã commit gần nhất 
+12. Xóa hết các file chưa commit
+	git clean --force
+13. Thay đổi tên tác giả của commit
+	git config user.name "Tên"
+	git config user.email "email"
+	git commit --amend --reset-author
