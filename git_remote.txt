@@ -17,5 +17,7 @@
 	git stash drop stash@{0}  (stash@{0} : Phiên bản muốn xóa)
 4. Lệnh gitignore: Ngăn commit nhug file ko muốn.
       * B1: Tạo file .gitignore
-      * B2: Khai báo những file ko muốn commit vào trong file .gitignore
-	
+      * B2: Khai báo những file ko muốn commit vào trong file .gitignore với cú pháp
+		/config.js  : 1 file nào đó
+		/log/*   : Toàn bộ file trong thư mục log 
+		!/log/file.txt  : cấu trúc cho phép commit 1 file nào đó trong thư mục log
