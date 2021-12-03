@@ -13,4 +13,4 @@
 	git stash apply stash@{0}  (stash@{0}: là phiên bản đã lưu. lấy trong thông tin khi dùng lệnh git stash list)
      *Xóa các phiên bản lưu
 	git stash drop stash@{0}  (stash@{0} : Phiên bản muốn xóa)
-3. Lệnh inogir
+3. Lệnh gitignore
