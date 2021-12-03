@@ -5,7 +5,9 @@
      * Clone băng giao thức SSH:
 	 - Tạo SSH key ở local
 	      ssh-keygen -t rsa (tạo ra key mặc định copy key trong file id_rsa.pub lên github...)
-2. Lưu tạm file dag làm việc chưa commit khi chuyển nhánh
+2. Đẩy file lên repo
+	git push origin tên nhánh hiện tại
+3. Lưu tạm file dag làm việc chưa commit khi chuyển nhánh
 	git stash save
      *Xem thông tin lưu
 	git stash list  (Danh dách các phiên bản đã lưu)
@@ -13,5 +15,7 @@
 	git stash apply stash@{0}  (stash@{0}: là phiên bản đã lưu. lấy trong thông tin khi dùng lệnh git stash list)
      *Xóa các phiên bản lưu
 	git stash drop stash@{0}  (stash@{0} : Phiên bản muốn xóa)
-3. Lệnh gitignore: Ngăn commit nhug file ko muốn.
+4. Lệnh gitignore: Ngăn commit nhug file ko muốn.
+      * B1: Tạo file .gitignore
+      * B2: Khai báo những file ko muốn commit vào trong file .gitignore
 	
