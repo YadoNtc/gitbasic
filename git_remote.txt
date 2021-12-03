@@ -36,4 +36,7 @@
 		git push origin <tên tag> 
 or
 		git push origin --tags   :: toàn bộ tag hiện có
-     
+    * Xóa tag ở local
+		git tag --delete tagName
+    * Xóa tag trên github
+		git push --delete origin tagName
