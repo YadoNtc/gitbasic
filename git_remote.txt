@@ -1,11 +1,11 @@
-﻿1. Lấy repo về local
+﻿1. Lấy repo từ github về local
      * Clone bằng giao thức Https:
 	 git clone https://github.com/YadoNtc/gitbasic.git
 	 git pull
      * Clone băng giao thức SSH:
 	 - Tạo SSH key ở local
 	      ssh-keygen -t rsa (tạo ra key mặc định copy key trong file id_rsa.pub lên github...)
-2. Đẩy file lên repo
+2. Đẩy file lên repo github
 	git push origin tên nhánh hiện tại
 3. Lưu tạm file dag làm việc chưa commit khi chuyển nhánh
 	git stash save
@@ -21,7 +21,19 @@
 		/config.js  : 1 file nào đó
 		/log/*   : Toàn bộ file trong thư mục log 
 		!/log/file.txt  : cấu trúc cho phép commit 1 file nào đó trong thư mục log
-5. Đẩy dự án lên repo tạo sẵn
+5. Đẩy dự án lên github với repo tạo sẵn
 	git remote add origin [link github chứa repo]
      đây code lên master
 	git push -u origin master
+6. Git Tag: Quản lý lịch sử commit, băng cách tạo tag
+	 Sau khi commit dùng lệnh sau để tạo tag cho commit vừa thực hiện
+		git tag -a <Tên Tag> -m "message"
+	 Xem các tag hiện có
+		git tag
+	 Xem chi tiết 1 tag dag 
+		git show <tên tag>
+    * Đẩy tag lên github
+		git push origin <tên tag> 
+or
+		git push origin --tags   :: toàn bộ tag hiện có
+     
