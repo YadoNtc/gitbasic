@@ -21,3 +21,7 @@
 		/config.js  : 1 file nào đó
 		/log/*   : Toàn bộ file trong thư mục log 
 		!/log/file.txt  : cấu trúc cho phép commit 1 file nào đó trong thư mục log
+5. Đẩy dự án lên repo tạo sẵn
+	git remote add origin [link github chứa repo]
+     đây code lên master
+	git push -u origin master
