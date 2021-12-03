@@ -32,6 +32,8 @@
 		git tag
 	 Xem chi tiết 1 tag dag 
 		git show <tên tag>
+    * Tạo tag cho một commit tùy chọn
+		git tag -a <TagName> -m "comment" <hashCommit>
     * Đẩy tag lên github
 		git push origin <tên tag> 
 or
@@ -40,3 +42,5 @@ or
 		git tag --delete tagName
     * Xóa tag trên github
 		git push --delete origin tagName
+7. Tạo nhánh mới từ 1 tag(version) có sẵn
+	git checkout -b <tên nhánh> <tên Tag>
