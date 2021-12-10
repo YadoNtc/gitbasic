@@ -1,7 +1,7 @@
 ﻿1. Lấy repo từ github về local
      * Clone bằng giao thức Https:
 	 git clone https://github.com/YadoNtc/gitbasic.git
-	 git pull
+	 git pull origin master    :  Cập nhật thay đổi từ github về local
      * Clone băng giao thức SSH:
 	 - Tạo SSH key ở local
 	      ssh-keygen -t rsa (tạo ra key mặc định copy key trong file id_rsa.pub lên github...)
